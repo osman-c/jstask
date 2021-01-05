@@ -5,6 +5,7 @@ var circles = [];
 var map = L.map('map').setView([45, -103], 4)
 var layer = null;
 
+var template = 
 createMap();
 startTimer();
 
@@ -71,5 +72,9 @@ function startTimer() {
         }
         }, 1000);
 }
+
+var template = $("#mapScript").html();
+var compiledTemplate = Handlebars.compile(template);
+compiledTemplate({});
 
 

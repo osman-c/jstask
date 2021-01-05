@@ -22,3 +22,7 @@ function createTable(){
 function timePassed(timestamp){
     return moment(timestamp).fromNow();
 }
+
+var template = $("#tableScript").html();
+var compiledTemplate = Handlebars.compile(template);
+compiledTemplate({});
